@@ -39,10 +39,7 @@ import CoachingDashboard from '../Pages/Coaching/CoachingDashbaord/CoachingDashb
 import ViewCoaches from '../Pages/Coaching/ViewCoaches/ViewCoaches';
 import ManageCoaches from '../Pages/Coaching/CoachingDashbaord/ManageCoaches/ManageCoaches';
 
-import BattingConsulting from '../Pages/Consulting/BattingConsulting/BattingConsulting';
-import BawlingConsulting from '../Pages/Consulting/BawlingConsulting/BawlingConsulting';
-import FieldingConsulting from '../Pages/Consulting/FieldingConsulting/FieldingConsulting';
-import PhysicalConsulting from '../Pages/Consulting/PhysicalConsulting/PhysicalConsulting';
+
 import { CartProvider } from '../context/CartContext'; // Import CartProvider
 import Cart from '../Components/Cart/Cart'; // Import Cart component
 
@@ -105,15 +102,17 @@ const AppRoutes = () => {
                     <Route path="/signIn" element={<SignIn />} />
                     <Route path="/signUp" element={<SignUp />} />
                     {/* Consulting Home Side */}
-                    <Route path="/batting-consulting" element={<BattingConsulting />} />
+                    {/* <Route path="/batting-consulting" element={<BattingConsulting />} />
                     <Route path="/bawling-consulting" element={<BawlingConsulting />} />
                     <Route path="/fielding-consulting" element={<FieldingConsulting />} />
-                    <Route path="/physical-consulting" element={<PhysicalConsulting />} />
+                    <Route path="/physical-consulting" element={<PhysicalConsulting />} /> */}
+
                     {/* Coaching User side */}
                     <Route path="/viewCoaches" element={<ViewCoaches />} />
                     <Route path="/coach/:id" element={<CoachDetails/>} />
                     <Route path="/mySessions" element={<UserBookings />} />
                     <Route path='/coachFeedbacks' element={<FeedbackForm/>} />
+                   
 
                     <Route
                         path="/checkout"

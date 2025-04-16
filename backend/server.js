@@ -12,6 +12,7 @@ const repairRoutes = require('./routes/repairRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const otpRoutes = require('./routes/otpRoutes');
 const coachRoutes = require('./routes/coachRoutes');
+const consultantRoutes = require('./routes/consultantRoutes');
 
 //db connection
 const connectDB = require("./config/db");
@@ -39,6 +40,7 @@ app.use('/api/services', repairRoutes);
 app.use('/api/order', orderRoutes);
 app.use('/api/auth', otpRoutes);
 app.use('/api/coach', coachRoutes);
+app.use('/api/consultants', consultantRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 @ http://localhost:${PORT}`));

@@ -49,7 +49,7 @@ const ConsultingHeader = () => {
                 <h1 className="consultantdashboard-username">Welcome, {userName}</h1>
             </div>
             <div className="header-right">
-                <button onClick={handleLogout} className="logout-btn">Logout</button>
+                <button onClick={handleLogout} className="consultinglogout-btn">Logout</button>
             </div>
         </header>
     );

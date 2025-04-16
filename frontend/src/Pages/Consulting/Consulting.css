@@ -1,7 +1,6 @@
 /* Main container styling */
 .consulting-management {
     background-color: lightgrey;
-    
     text-align: center;
     min-height: 100vh;
 }
@@ -10,7 +9,7 @@
 .consulting-title {
     font-size: 50px;
     font-weight: bold;
-    color:blue;
+    color:black;
     margin-bottom: 20px;
 }
 
@@ -63,7 +62,155 @@
     transform: scale(1.05);
 }
 
+/* Add a selected state for cards */
+.consulting-card.selected {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Link styling */
 .consulting-card-link {
     text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Consulting details section */
+.consulting-details {
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual consulting info boxes */
+.consulting-info {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-left: 4px solid #007bff;
+}
+
+.consulting-info h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.consulting-info p {
+    color: #444;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Booking section styling */
+.booking-section {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Form styling */
+.consulting-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+/* Selected content animation */
+.selected-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Add a subtle transition for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Consultant dropdown styling */
+.consultant-select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    background-color: white;
+}
+
+.consultant-select option {
+    padding: 8px;
+}
+
+/* Loading and error message styling */
+.loading-message, .error-message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.loading-message {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
 }

@@ -1,0 +1,132 @@
+/* Booking section styling */
+.booking-section {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.booking-section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Form styling */
+.consulting-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.consultant-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Consultant dropdown styling */
+.consultant-select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    background-color: white;
+}
+
+.consultant-select option {
+    padding: 8px;
+}
+
+/* Submit button styling */
+.submit-btn {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Loading and error message styling */
+.loading-message, .error-message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.loading-message {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .booking-section {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+    
+    .consulting-form {
+        max-width: 100%;
+    }
+}
+
+.input-error {
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.05);
+}
